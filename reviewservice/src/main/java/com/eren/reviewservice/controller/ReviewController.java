@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/reviews")
+@RequestMapping(path="/reviews")
 @AllArgsConstructor
 public class ReviewController {
 
@@ -38,12 +38,7 @@ public class ReviewController {
         return new ResponseEntity<>(response, HttpStatus.OK);
 
     }
-    @GetMapping
-    public ResponseEntity<List<Review>> getAllReviews(){
-        List<Review> response = reviewService.getAllReviews();
-        return new ResponseEntity<>(response, HttpStatus.OK);
 
-    }
 
 
     @PutMapping("/update/{id}")

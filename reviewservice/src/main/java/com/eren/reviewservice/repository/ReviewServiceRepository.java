@@ -8,7 +8,5 @@ import java.util.List;
 
 @Repository
 public interface ReviewServiceRepository extends JpaRepository<Review,Long> {
-
-
     List<Review> findAllByCompanyId(Long id);
 }
