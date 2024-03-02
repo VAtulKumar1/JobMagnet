@@ -44,7 +44,7 @@ public class CompanyServiceImpl implements CompanyService {
         if(existingCompany.isPresent()){
             Company updateCompany = existingCompany.get();
             updateCompany.setName(company.getName());
-            updateCompany.setLocation(company.getLocation());
+            updateCompany.setDescription(company.getDescription());
             return companyRepository.save(updateCompany);
         }
         else{

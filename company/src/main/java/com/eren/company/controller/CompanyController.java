@@ -32,8 +32,8 @@ public class CompanyController {
 
     }
 
-    @GetMapping("/company")
-    public ResponseEntity<Company> getCompanyById(@RequestParam Long id) throws Exception {
+    @GetMapping("/company/{id}")
+    public ResponseEntity<Company> getCompanyById(@PathVariable Long id) throws Exception {
         Company response =companyService.getCompanyById(id);
         return new ResponseEntity<>(response, HttpStatus.OK);
 

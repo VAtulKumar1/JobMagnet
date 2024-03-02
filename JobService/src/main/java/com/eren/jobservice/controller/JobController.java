@@ -2,6 +2,7 @@ package com.eren.jobservice.controller;
 
 
 import com.eren.jobservice.JobService;
+import com.eren.jobservice.dto.JobWithCompanyDTO;
 import com.eren.jobservice.entity.Job;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -27,8 +28,8 @@ public class JobController {
     }
 
     @GetMapping
-    public ResponseEntity<List<Job>> findAll(){
-        List<Job> response =jobService.findAll();
+    public ResponseEntity<List<JobWithCompanyDTO>> findAll(){
+        List<JobWithCompanyDTO> response =jobService.findAll();
         return new ResponseEntity<>(response,HttpStatus.CREATED);
 
     }
